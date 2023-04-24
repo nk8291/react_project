@@ -34,4 +34,12 @@ class Report extends Component {
       }
     };
     const report = powerbi.embed(reportContainer, reportConfig);
-    report
+    report.render();
+  }
+
+  render() {
+    return <div id="reportContainer" />;
+  }
+}
+
+export default Report;

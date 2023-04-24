@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import React, { Component } from "react";
 import Report from "./Report";
+import axios from 'axios';
+
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +30,7 @@ class App extends Component {
     });
     const reportResponse = await axios.get("https://app.powerbi.com/view?r=eyJrIjoiODY1Y2JhMTQtODZlMi00NDM1LWEzOWItMmEzYzJjZGU5MWIwIiwidCI6ImViNDJjZGViLWI3YjUtNGE2ZC1iYzFjLWQxZWJjYmZjNDgyZSJ9", {
       headers: {
-        Authorization: `Bearer ${access_token}`
+        Authorization: 'Bearer ${access_token}'
       }
     });
     const { embedUrl } = reportResponse.data;
